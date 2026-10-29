@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of George Njau Wanjiku, Junior Data Analyst specializing in SQL, Python, Power BI, and Microsoft Excel. Transforming raw data into actionable business insights.">
+  <meta name="keywords" content="Data Analyst, SQL, Python, Power BI, Excel, Data Visualization, Portfolio, George Njau">
+  <meta name="author" content="George Njau Wanjiku">
+
+  <!-- Open Graph Protocol -->
+  <meta property="og:title" content="George Njau Wanjiku | Data Analyst Portfolio">
+  <meta property="og:description" content="Turning Data Into Actionable Insights with SQL, Python, Excel, and Power BI.">
+  <meta property="og:type" content="website">
+
+  <title>George Njau Wanjiku | Junior Data Analyst Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="header" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="logo" aria-label="George Njau Homepage">
+        <span class="logo-text">George<span class="accent-dot">.</span>Njau</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-action">
+          <a href="assets/George-Data Analyst CV.pdf" class="btn btn-outline btn-sm" download="George_Njau_CV.pdf" id="navCvBtn">
+            <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> Download CV
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero section" id="home">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <p class="hero-pretitle"><span class="terminal-prefix">></span> HELLO, I'M GEORGE NJAU</p>
+          <h1 class="hero-title">Turning Data Into <span class="gradient-text">Actionable Insights.</span></h1>
+          <p class="hero-description">
+            I'm a data analyst passionate about transforming raw data into meaningful insights that support smarter business decisions. I use SQL, Python, Excel, and Power BI to clean, analyze, visualize, and communicate data effectively.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fa-solid fa-chart-line" aria-hidden="true"></i> View My Projects
+            </a>
+            <a href="assets/George-Data Analyst CV.pdf" class="btn btn-secondary" download="George_Njau_CV.pdf">
+              <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> Download My CV
+            </a>
+            <a href="#contact" class="btn btn-ghost">
+              <i class="fa-regular fa-envelope" aria-hidden="true"></i> Contact Me
+            </a>
+          </div>
+          <div class="hero-quick-meta">
+            <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Based in Kenya</span>
+            <span><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Open to full-time & freelance roles</span>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <!-- Analytical Dashboard Graphic Mockup -->
+          <div class="dashboard-mockup">
+            <div class="mockup-header">
+              <div class="mockup-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="mockup-title">analytics_dashboard.pbix</span>
+            </div>
+            <div class="mockup-body">
+              <div class="mockup-kpis">
+                <div class="kpi-card">
+                  <span class="kpi-label">QUERY RUNTIME</span>
+                  <span class="kpi-val">0.04s</span>
+                </div>
+                <div class="kpi-card">
+                  <span class="kpi-label">DATA CLEANED</span>
+                  <span class="kpi-val">100%</span>
+                </div>
+                <div class="kpi-card">
+                  <span class="kpi-label">INTEGRITY</span>
+                  <span class="kpi-val">PASS</span>
+                </div>
+              </div>
+
+              <!-- Bar Chart Visualization -->
+              <div class="mockup-chart-box">
+                <div class="chart-label-row">
+                  <span>Sales Trend by Category</span>
+                  <span>SQL • Power BI</span>
+                </div>
+                <div class="bars-container">
+                  <div class="bar-col"><div class="bar" style="height: 45%;"></div><span>Q1</span></div>
+                  <div class="bar-col"><div class="bar" style="height: 65%;"></div><span>Q2</span></div>
+                  <div class="bar-col"><div class="bar highlight" style="height: 85%;"></div><span>Q3</span></div>
+                  <div class="bar-col"><div class="bar" style="height: 70%;"></div><span>Q4</span></div>
+                </div>
+              </div>
+
+              <!-- Data Table Mockup -->
+              <div class="mockup-table">
+                <div class="table-row table-head">
+                  <span>DIM_KEY</span>
+                  <span>METRIC</span>
+                  <span>VARIANCE</span>
+                </div>
+                <div class="table-row">
+                  <code>#4091</code>
+                  <span>Retention</span>
+                  <span class="badge-status positive">+12.4%</span>
+                </div>
+                <div class="table-row">
+                  <code>#5182</code>
+                  <span>Conversion</span>
+                  <span class="badge-status">Steady</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+      <div class="container">
+        <div class="section-title-wrap">
+          <h2 class="section-title">About Me</h2>
+          <div class="section-divider"></div>
+          <p class="section-subtitle">Bridging business problems and data-driven solutions.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text-content">
+            <p class="about-p">
+              I'm an aspiring data analyst with a strong interest in using data to solve real-world problems. My work involves exploring datasets, identifying patterns, building visualizations, and developing reports that help people make informed decisions.
+            </p>
+            <p class="about-p">
+              I work with Excel, SQL, Python, and Power BI, and I'm continuously improving my skills in statistics, data cleaning, data modeling, and analytical problem-solving.
+            </p>
+            <p class="about-p highlight-p">
+              My goal is to help organizations turn complex data into clear, useful, and actionable insights.
+            </p>
+            <div class="about-actions">
+              <a href="#contact" class="btn btn-primary btn-sm">Let's Work Together</a>
+              <a href="#projects" class="btn btn-outline btn-sm">Explore Portfolio</a>
+            </div>
+          </div>
+
+          <div class="analytical-approach-card">
+            <h3 class="approach-heading">
+              <i class="fa-solid fa-compass" aria-hidden="true"></i> My Analytical Approach
+            </h3>
+            <div class="approach-steps">
+              <div class="step-item">
+                <div class="step-num">01</div>
+                <div class="step-info">
+                  <h4>Understand the business problem</h4>
+                  <p>Identify the core objective, stakeholder questions, and metrics of interest before touching any dataset.</p>
+                </div>
+              </div>
+              <div class="step-item">
+                <div class="step-num">02</div>
+                <div class="step-info">
+                  <h4>Collect and clean the data</h4>
+                  <p>Handle missing records, resolve inconsistencies, standardize data formats, and validate integrity.</p>
+                </div>
+              </div>
+              <div class="step-item">
+                <div class="step-num">03</div>
+                <div class="step-info">
+                  <h4>Analyze and visualize findings</h4>
+                  <p>Perform exploratory queries, segment metrics, test hypotheses, and create visual chart components.</p>
+                </div>
+              </div>
+              <div class="step-item">
+                <div class="step-num">04</div>
+                <div class="step-info">
+                  <h4>Communicate insights & recommendations</h4>
+                  <p>Deliver focused reports and dashboards that outline findings clearly to non-technical decision-makers.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills section" id="skills">
+      <div class="container">
+        <div class="section-title-wrap">
+          <h2 class="section-title">Technical Skills</h2>
+          <div class="section-divider"></div>
+          <p class="section-subtitle">Core tools, technologies, and analytical proficiencies.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Skill Card 1: Data Analysis -->
+          <div class="skill-category-card">
+            <div class="card-icon"><i class="fa-solid fa-chart-pie" aria-hidden="true"></i></div>
+            <h3 class="card-title">Data Analysis</h3>
+            <ul class="skill-list">
+              <li><i class="fa-regular fa-file-excel skill-icon" aria-hidden="true"></i> Microsoft Excel</li>
+              <li><i class="fa-solid fa-database skill-icon" aria-hidden="true"></i> SQL</li>
+              <li><i class="fa-brands fa-python skill-icon" aria-hidden="true"></i> Python</li>
+              <li><i class="fa-solid fa-table-cells skill-icon" aria-hidden="true"></i> Pandas</li>
+              <li><i class="fa-solid fa-calculator skill-icon" aria-hidden="true"></i> NumPy</li>
+            </ul>
+          </div>
+
+          <!-- Skill Card 2: Data Visualization -->
+          <div class="skill-category-card">
+            <div class="card-icon"><i class="fa-solid fa-chart-column" aria-hidden="true"></i></div>
+            <h3 class="card-title">Data Visualization</h3>
+            <ul class="skill-list">
+              <li><i class="fa-solid fa-chart-simple skill-icon" aria-hidden="true"></i> Microsoft Power BI</li>
+              <li><i class="fa-solid fa-code-branch skill-icon" aria-hidden="true"></i> DAX</li>
+              <li><i class="fa-solid fa-chart-line skill-icon" aria-hidden="true"></i> Data Visualization</li>
+              <li><i class="fa-solid fa-table-columns skill-icon" aria-hidden="true"></i> Dashboard Development</li>
+              <li><i class="fa-solid fa-image skill-icon" aria-hidden="true"></i> Matplotlib</li>
+            </ul>
+          </div>
+
+          <!-- Skill Card 3: Databases -->
+          <div class="skill-category-card">
+            <div class="card-icon"><i class="fa-solid fa-server" aria-hidden="true"></i></div>
+            <h3 class="card-title">Databases</h3>
+            <ul class="skill-list">
+              <li><i class="fa-solid fa-database skill-icon" aria-hidden="true"></i> MySQL</li>
+              <li><i class="fa-solid fa-hard-drive skill-icon" aria-hidden="true"></i> Microsoft SQL Server</li>
+              <li><i class="fa-solid fa-diagram-project skill-icon" aria-hidden="true"></i> Data Modeling</li>
+              <li><i class="fa-solid fa-terminal skill-icon" aria-hidden="true"></i> Database Querying</li>
+            </ul>
+          </div>
+
+          <!-- Skill Card 4: Analytical Methods -->
+          <div class="skill-category-card">
+            <div class="card-icon"><i class="fa-solid fa-magnifying-glass-chart" aria-hidden="true"></i></div>
+            <h3 class="card-title">Analytical Methods</h3>
+            <ul class="skill-list">
+              <li><i class="fa-solid fa-square-root-variable skill-icon" aria-hidden="true"></i> Descriptive Statistics</li>
+              <li><i class="fa-solid fa-microscope skill-icon" aria-hidden="true"></i> Exploratory Data Analysis</li>
+              <li><i class="fa-solid fa-broom skill-icon" aria-hidden="true"></i> Data Cleaning</li>
+              <li><i class="fa-solid fa-arrow-trend-up skill-icon" aria-hidden="true"></i> Trend Analysis</li>
+              <li><i class="fa-solid fa-briefcase skill-icon" aria-hidden="true"></i> Business Intelligence</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects section" id="projects">
+      <div class="container">
+        <div class="section-title-wrap">
+          <h2 class="section-title">Featured Projects</h2>
+          <div class="section-divider"></div>
+          <p class="section-subtitle">Real-world data investigations, SQL querying, dashboards, and exploratory data analysis.</p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="project-filter-container">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="sql">SQL</button>
+          <button class="filter-btn" data-filter="python">Python</button>
+          <button class="filter-btn" data-filter="powerbi">Power BI</button>
+          <button class="filter-btn" data-filter="excel">Excel</button>
+        </div>
+
+        <!-- Project Cards Grid -->
+        <div class="projects-grid" id="projectsGrid">
+
+          <!-- Project 1 -->
+          <article class="project-card" data-category="powerbi">
+            <div class="project-card-header">
+              <span class="project-badge"><i class="fa-solid fa-chart-pie" aria-hidden="true"></i> Business Intelligence</span>
+              <h3 class="project-title">E-Commerce Sales Dashboard</h3>
+            </div>
+            <div class="project-card-body">
+              <p class="project-desc">Developed an interactive Power BI dashboard to monitor sales performance, analyze product categories, explore customer trends, and support business decisions.</p>
+              
+              <div class="project-meta-box">
+                <span class="meta-title"><i class="fa-solid fa-circle-question" aria-hidden="true"></i> Key Analytical Questions:</span>
+                <p>What are the year-over-year revenue trends? Which product categories drive the highest profit margins, and where are shipping bottlenecks occurring?</p>
+              </div>
+
+              <div class="project-meta-box">
+                <span class="meta-title"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i> Findings / Business Value:</span>
+                <p>Created dynamic DAX measures for real-time tracking, structured clean star-schema relationships, and built intuitive drill-downs for operational leaders.</p>
+              </div>
+
+              <div class="project-tech-stack">
+                <span class="tech-tag">Power BI</span>
+                <span class="tech-tag">DAX</span>
+                <span class="tech-tag">Data Modeling</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/JV-254/E-COMMERCE-SALES-ANALYSIS-USING-POWER-BI-PROJECT" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github" aria-hidden="true"></i> View Project
+              </a>
+              <a href="https://app.powerbi.com/links/2Et7cXoRP4?ctid=a8891895-e82e-4ce5-92fc-355701c54a1c&pbi_source=linkShare" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> View Dashboard
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card" data-category="python">
+            <div class="project-card-header">
+              <span class="project-badge"><i class="fa-brands fa-python" aria-hidden="true"></i> Python & Statistics</span>
+              <h3 class="project-title">Student Performance Analysis</h3>
+            </div>
+            <div class="project-card-body">
+              <p class="project-desc">Explored student performance data using Python to investigate relationships between study hours, attendance, assignment scores, and final examination results.</p>
+              
+              <div class="project-meta-box">
+                <span class="meta-title"><i class="fa-solid fa-circle-question" aria-hidden="true"></i> Key Analytical Questions:</span>
+                <p>How strongly does attendance correlate with final exam marks? Does continuous assignment completion buffer students against exam underperformance?</p>
+              </div>
+
+              <div class="project-meta-box">
+                <span class="meta-title"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i> Findings / Business Value:</span>
+                <p>Identified linear relationships between attendance metrics and passing rates, providing actionable early-warning thresholds for educators.</p>
+              </div>
+
+              <div class="project-tech-stack">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Pandas</span>
+                <span class="tech-tag">NumPy</span>
+                <span class="tech-tag">Matplotlib</span>
+                <span class="tech-tag">Statistics</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/JV-254/STUDENT-PERFORMANCE-ANALYSIS-USING-PYTHON" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github" aria-hidden="true"></i> View Project
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card" data-category="powerbi">
+            <div class="project-card-header">
+              <span class="project-badge"><i class="fa-solid fa-chart-line" aria-hidden="true"></i> Business Intelligence</span>
+              <h3 class="project-title">Walmart Sales Analysis</h3>
+            </div>
+            <div class="project-card-body">
+              <p class="project-desc">Performed exploratory data analysis on Walmart sales data to investigate sales patterns, trends, and factors associated with changes in performance.</p>
+              
+              <div class="project-meta-box">
+                <span class="meta-title"><i class="fa-solid fa-circle-question" aria-hidden="true"></i> Key Analytical Questions:</span>
+                <p>Which store departments experience the most seasonal volatility during holidays? How do external macroeconomic factors align with weekly store revenues?</p>
+              </div>
+
+              <div class="project-meta-box">
+                <span class="meta-title"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i> Findings / Business Value:</span>
+                <p>Visualized holiday sales spikes across key departments, mapped baseline demand patterns, and identified store locations with the most stable sales year-round.</p>
+              </div>
+
+              <div class="project-tech-stack">
+                <span class="tech-tag">Power Bi</span>
+                <span class="tech-tag">DAX</span>
+                <span class="tech-tag">Data Modelling</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/JV-254/WALMART-SALES-ANALYSIS-DASHBOARD-AND-REPORTS" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github" aria-hidden="true"></i> View Project
+              </a>
+               <a href="https://app.powerbi.com/links/FNne-TF0uz?ctid=a8891895-e82e-4ce5-92fc-355701c54a1c&pbi_source=linkShare" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> View Dashboard
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card" data-category="sql">
+            <div class="project-card-header">
+              <span class="project-badge"><i class="fa-solid fa-database" aria-hidden="true"></i> SQL Analysis</span>
+              <h3 class="project-title">E-Commerce Sales Analysis using MySQL</h3>
+            </div>
+            <div class="project-card-body">
+              <p class="project-desc">Analyzed e-commerce sales data using MySQL to identify trends and patterns in customer behavior and revenue generation.</p>
+              
+              <div class="project-meta-box">
+                <span class="meta-title"><i class="fa-solid fa-circle-question" aria-hidden="true"></i> Key Analytical Questions:</span>
+                <p>What are the month-over-month revenue changes across regional branches? How do individual sales representatives perform against target quotas?</p>
+              </div>
+
+              <div class="project-meta-box">
+                <span class="meta-title"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i> Findings:</span>
+                <p>Identified key sales drivers and performance bottlenecks, enabling data-driven decision-making for inventory management and sales strategy.</p>
+              </div>
+
+              <div class="project-tech-stack">
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">Data Analysis</span>
+                <span class="tech-tag">SQL Queries</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/JV-254/E-COMMERCE-SALES-ANALYSIS-USING-MYSQL" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github" aria-hidden="true"></i> View Project
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services section" id="services">
+      <div class="container">
+        <div class="section-title-wrap">
+          <h2 class="section-title">Freelance & Analytical Services</h2>
+          <div class="section-divider"></div>
+          <p class="section-subtitle">Practical data solutions tailored to businesses, teams, and independent projects.</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-filter" aria-hidden="true"></i></div>
+            <h3 class="service-title">Data Cleaning and Preparation</h3>
+            <p class="service-desc">Transforming messy, duplicated, and unformatted datasets into well-structured, error-free tables ready for analysis.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-compass" aria-hidden="true"></i></div>
+            <h3 class="service-title">Exploratory Data Analysis</h3>
+            <p class="service-desc">Investigating distributions, outliers, and correlations in your data to uncover actionable trends and underlying patterns.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-database" aria-hidden="true"></i></div>
+            <h3 class="service-title">SQL Querying and Reporting</h3>
+            <p class="service-desc">Writing performant SQL queries, joins, aggregations, and subqueries to extract meaningful summary tables from relational databases.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-regular fa-file-excel" aria-hidden="true"></i></div>
+            <h3 class="service-title">Excel Reporting & Dashboards</h3>
+            <p class="service-desc">Building interactive spreadsheets with PivotTables, slicers, dynamic formulas, and automated summaries for executive reporting.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-chart-simple" aria-hidden="true"></i></div>
+            <h3 class="service-title">Power BI Dashboard Development</h3>
+            <p class="service-desc">Designing intuitive, interactive Power BI reports with clear visual hierarchies, DAX calculations, and cross-filtering.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-brands fa-python" aria-hidden="true"></i></div>
+            <h3 class="service-title">Python-Based Data Analysis</h3>
+            <p class="service-desc">Automating data manipulation and analytical workflows with Pandas, NumPy, and statistical charting with Matplotlib.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-briefcase" aria-hidden="true"></i></div>
+            <h3 class="service-title">Business Performance Reporting</h3>
+            <p class="service-desc">Consolidating disparate metrics into structured key performance indicator (KPI) reports to track progress and targets.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Process Section -->
+    <section class="process section" id="process">
+      <div class="container">
+        <div class="section-title-wrap">
+          <h2 class="section-title">My Work Process</h2>
+          <div class="section-divider"></div>
+          <p class="section-subtitle">How I collaborate with clients from raw requirements to finished insights.</p>
+        </div>
+
+        <div class="process-timeline">
+          <div class="timeline-step">
+            <div class="timeline-marker">1</div>
+            <div class="timeline-content">
+              <h3>Step 1: Discovery</h3>
+              <p>Understand the client's objectives, core questions, operational context, and available data sources.</p>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="timeline-marker">2</div>
+            <div class="timeline-content">
+              <h3>Step 2: Data Preparation</h3>
+              <p>Inspect, clean, validate, structure, and check the data for errors or discrepancies prior to analysis.</p>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="timeline-marker">3</div>
+            <div class="timeline-content">
+              <h3>Step 3: Analysis</h3>
+              <p>Apply statistical and analytical methods using SQL, Python, or Excel to uncover relationships and trends.</p>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="timeline-marker">4</div>
+            <div class="timeline-content">
+              <h3>Step 4: Visualization</h3>
+              <p>Create clean, purposeful charts, dashboards, and KPI summaries that communicate findings at a glance.</p>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="timeline-marker">5</div>
+            <div class="timeline-content">
+              <h3>Step 5: Delivery</h3>
+              <p>Present findings clearly, transparently explain any analytical limitations, and outline actionable next steps.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+      <div class="container">
+        <div class="section-title-wrap">
+          <h2 class="section-title">Get In Touch</h2>
+          <div class="section-divider"></div>
+          <p class="section-subtitle">Have a project, role, or data question? Send a message or reach out directly.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Information Side -->
+          <div class="contact-info-panel">
+            <h3 class="panel-heading">Contact Details</h3>
+            <p class="panel-desc">I am actively open to data analyst roles, internships, and freelance projects. Let's discuss how data can help your business.</p>
+
+            <ul class="contact-meta-list">
+              <li class="contact-meta-item">
+                <div class="contact-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></div>
+                <div>
+                  <span class="meta-label">Email</span>
+                  <a href="mailto:njaugeorge42@gmail.com" class="meta-val link-hover">njaugeorge42@gmail.com</a>
+                </div>
+              </li>
+              <li class="contact-meta-item">
+                <div class="contact-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
+                <div>
+                  <span class="meta-label">Location</span>
+                  <span class="meta-val">Kenya</span>
+                </div>
+              </li>
+              <li class="contact-meta-item">
+                <div class="contact-icon"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></div>
+                <div>
+                  <span class="meta-label">LinkedIn</span>
+                  <a href="https://linkedin.com/in/jvtech254" class="meta-val link-hover" target="_blank" rel="noopener noreferrer">https://linkedin.com/in/jvtech254</a>
+                </div>
+              </li>
+              <li class="contact-meta-item">
+                <div class="contact-icon"><i class="fa-brands fa-github" aria-hidden="true"></i></div>
+                <div>
+                  <span class="meta-label">GitHub</span>
+                  <a href="https://github.com/JV-254" class="meta-val link-hover" target="_blank" rel="noopener noreferrer">https://github.com/JV-254</a>
+                </div>
+              </li>
+            </ul>
+
+            <div class="mailto-fallback-box">
+              <p><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Need an immediate reply? You can also click below to open your native mail client:</p>
+              <a href="mailto:njaugeorge42@gmail.com?subject=Data%20Analysis%20Inquiry" class="btn btn-secondary btn-sm">
+                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Open Direct Email
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact Form Side -->
+          <div class="contact-form-panel">
+            <form id="contactForm" novalidate>
+              <div class="form-group">
+                <label for="name">Your Name <span class="required">*</span></label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="George Njau" required>
+                <span class="form-error" id="nameError">Please enter your name.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="njaugeorge42@gmail.com" required>
+                <span class="form-error" id="emailError">Please enter a valid email address.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject <span class="required">*</span></label>
+                <input type="text" id="subject" name="subject" class="form-control" placeholder="Project Inquiry " required>
+                <span class="form-error" id="subjectError">Please enter a subject.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message <span class="required">*</span></label>
+                <textarea id="message" name="message" rows="5" class="form-control" placeholder="Briefly describe your dataset or project objectives..." required></textarea>
+                <span class="form-error" id="messageError">Please enter your message (at least 15 characters).</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Send Message
+              </button>
+
+              <div id="formStatus" class="form-status" role="alert" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-col">
+        <a href="#home" class="footer-logo">George<span class="accent-dot">.</span>Njau</a>
+        <p class="footer-tagline">Data Analyst transforming raw business data into actionable visual insights.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-nav">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Connect</h4>
+        <div class="footer-socials">
+          <a href="https://github.com/JV-254" target="_blank" rel="noopener noreferrer" aria-label="George Njau on GitHub">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+          </a>
+          <a href="https://linkedin.com/in/jvtech254" target="_blank" rel="noopener noreferrer" aria-label="George Njau on LinkedIn">
+            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+          </a>
+          <a href="mailto:njaugeorge42@gmail.com" aria-label="Email George Njau">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+          </a>
+        </div>
+        <p class="footer-location"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Kenya</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© <span id="currentYear"></span> George Njau Wanjiku. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top" aria-label="Scroll back to top">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
