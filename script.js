@@ -145,13 +145,14 @@ document.addEventListener('DOMContentLoaded', () => {
     currentYearSpan.textContent = new Date().getFullYear();
   }
 
-  // 8. Contact Form Client-Side Validation & Transparent Feedback
+ // 8. Contact Form Client-Side Validation & Web3Forms AJAX Submission
   const contactForm = document.getElementById('contactForm');
   const nameInput = document.getElementById('name');
   const emailInput = document.getElementById('email');
   const subjectInput = document.getElementById('subject');
   const messageInput = document.getElementById('message');
   const formStatus = document.getElementById('formStatus');
+  const submitBtn = document.getElementById('submitBtn');
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -169,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
       const isNameValid = validateField(nameInput, nameInput.value.trim().length >= 2, 'nameError');
@@ -178,25 +179,57 @@ document.addEventListener('DOMContentLoaded', () => {
       const isMessageValid = validateField(messageInput, messageInput.value.trim().length >= 15, 'messageError');
 
       if (isNameValid && isEmailValid && isSubjectValid && isMessageValid) {
-        // Honest notification: No backend configured
-        formStatus.className = 'form-status notice';
-        formStatus.innerHTML = `
-          <strong><i class="fa-solid fa-circle-exclamation"></i> Note:</strong> 
-          This static website does not have an active server backend or API service (e.g., Formspree or EmailJS) configured yet.
-          <br><br>
-          To reach George directly right now, please use the 
-          <a href="mailto:njaugeorge42@gmail.com?subject=${encodeURIComponent(subjectInput.value)}&body=${encodeURIComponent('From: ' + nameInput.value + ' (' + emailInput.value + ')\n\n' + messageInput.value)}" style="text-decoration: underline; color: #fff;">
-            <strong>direct mailto link</strong>
-          </a> or write directly to <strong>njaugeorge42@gmail.com</strong>.
-        `;
-      } else {
-        if (formStatus) {
-          formStatus.style.display = 'none';
+        // Disable button & show loader state
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+
+        const formData = new FormData(contactForm);
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+
+        try {
+          const response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: json
+          });
+
+          const result = await response.json();
+
+          formStatus.style.display = 'block';
+
+          if (response.status === 200 && result.success) {
+            formStatus.className = 'form-status';
+            formStatus.style.backgroundColor = 'rgba(16, 185, 129, 0.15)';
+            formStatus.style.color = '#10b981';
+            formStatus.style.border = '1px solid rgba(16, 185, 129, 0.3)';
+            formStatus.innerHTML = '<strong><i class="fa-solid fa-circle-check"></i> Message Sent!</strong> Thank you for reaching out. I will get back to you shortly.';
+            contactForm.reset();
+          } else {
+            formStatus.className = 'form-status';
+            formStatus.style.backgroundColor = 'rgba(239, 68, 68, 0.15)';
+            formStatus.style.color = '#ef4444';
+            formStatus.style.border = '1px solid rgba(239, 68, 68, 0.3)';
+            formStatus.innerHTML = `<strong>Error:</strong> ${result.message || 'Something went wrong. Please check your access key or try again.'}`;
+          }
+        } catch (error) {
+          formStatus.style.display = 'block';
+          formStatus.className = 'form-status';
+          formStatus.style.backgroundColor = 'rgba(239, 68, 68, 0.15)';
+          formStatus.style.color = '#ef4444';
+          formStatus.style.border = '1px solid rgba(239, 68, 68, 0.3)';
+          formStatus.innerHTML = '<strong>Network Error:</strong> Unable to reach email server. Please check your connection or use direct email.';
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Send Message';
         }
       }
     });
 
-    // Real-time error removal on input
+    // Real-time error removal when user types
     [nameInput, emailInput, subjectInput, messageInput].forEach(input => {
       if (input) {
         input.addEventListener('input', () => {
